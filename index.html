@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f6f2"><meta name="description" content="Ваша Япония на двоих: 7–15 мая 2027. Токио, Осака, Киото — личные места, новые находки и маршруты от вас."><title>ふたり · Япония вдвоём</title><link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"></head><body>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="./" aria-label="На главную"><span class="brand-mark">ふたり<span class="brand-sun"></span></span><span class="brand-sub">ЯПОНИЯ ВДВОЁМ</span></a>
+<div class="side-label">НАШЕ ПУТЕШЕСТВИЕ</div>
+<nav class="side-nav" aria-label="Главное меню"><button class="nav-item active" id="explore-nav" data-view="explore"><span data-icon="compass"></span> Наши места <span class="nav-count" id="total-count"></span></button><button class="nav-item" id="favorites-nav" data-view="favorites"><span data-icon="heart"></span> Избранное <span class="nav-count" id="favorites-count">0</span></button><button class="nav-item" id="about-nav"><span data-icon="calendar"></span> О поездке <span class="small-arrow">↗</span></button></nav>
+<div class="side-label cities-label">ТРИ ГОРОДА, ОДНА ИСТОРИЯ</div>
+<div id="side-cities" class="side-cities"></div>
+<div class="side-note"><span class="note-spark">✳</span><h3>В своём ритме.</h3><p>Немного заблудиться.<br>Найти свой рамен.<br>Увезти пару воспоминаний.</p><span class="note-jp">いい旅を</span></div>
+<div class="sidebar-bottom"><span class="pair-dots"><i></i><i></i></span><span>Для вас двоих <small>С любовью к маленьким открытиям</small></span></div>
+</aside>
+<main>
+<header class="topbar"><div class="mobile-brand">ふたり<span>Япония вдвоём</span></div><div class="breadcrumb">Наше путешествие <span>/</span> <b id="breadcrumb-view">Места и впечатления</b></div><button class="trip-dates" id="trip-info"><span data-icon="calendar"></span> 7–15 мая 2027 <span class="date-dot"></span> 9 дней</button></header>
+<div class="main-content">
+<section class="hero" aria-label="Япония на двоих"><img class="hero-image" src="./assets/tokyo.jpg" alt="Неоновые улицы Токио"><div class="hero-shade"></div><div class="hero-content"><span class="hero-eyebrow"><i></i> ВАША МАЛЕНЬКАЯ БОЛЬШАЯ ПОЕЗДКА</span><h1>Два билета.<br>Тысяча впечатлений.</h1><p>От первого рамена до последнего неонового вечера.<br>Собрали ту Японию, в которую хочется вместе.</p><div class="hero-route"><span>東京 <b>Токио</b></span><i>→</i><span>大阪 <b>Осака</b></span><i>→</i><span>京都 <b>Киото</b></span></div></div><div class="hero-stamp"><span>JAPAN, JUST US TWO</span><strong>日本</strong><small>MAY 2027 · 07—15</small></div></section>
+<nav class="mobile-view-nav" aria-label="Места и избранное"><button data-view="explore" class="active">Наши места</button><button data-view="favorites"><span data-icon="heart"></span> Избранное</button></nav>
+<section class="explore" aria-labelledby="explore-title">
+<div class="section-intro"><div><div class="eyebrow">ВЫБИРАЕМ ПО НАСТРОЕНИЮ</div><h2 id="explore-title">Чем займёмся?</h2><p id="section-subtitle">Ваши желания и места, которые хочется вам показать.</p></div><button id="location-button" class="location-button"><span data-icon="locate"></span><span id="location-label">Я здесь · включить геопозицию</span></button></div>
+<p id="geo-status" class="geo-status" role="status" aria-live="polite">Включите геопозицию, чтобы увидеть расстояния от вас в метрах.</p>
+<div id="categories" class="categories" role="tablist" aria-label="Чем заняться"></div>
+<div class="filter-row"><div class="city-filters" id="city-filters" role="group" aria-label="Город"></div><div class="search-sort"><label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="Название, район, вайб…" aria-label="Поиск мест"></label><label class="sort-label"><span data-icon="sort"></span><select id="sort" aria-label="Сортировка"><option value="default">В порядке списка</option><option value="distance">Ближе ко мне</option><option value="name">По названию</option></select></label></div></div>
+<div class="results-meta"><span id="results-count" aria-live="polite"></span><span class="legend"><i class="list-dot"></i> Ваш список <i class="found-dot"></i> Нашли для вас</span></div>
+<div id="results"></div>
+<div class="travel-tip"><span data-icon="sparkles"></span><div><strong>Хороший план — оставить место случайностям.</strong><p>На 9 дней выбирайте пару главных мест в день. Остальное — по настроению.</p></div><span class="tip-jp">旅</span></div>
+</section>
+<footer><span class="footer-brand">ふたり <span>маленький гид для большой поездки</span></span><button id="sources-button">О местах и источниках <span>↗</span></button></footer>
+</div></main></div>
+<dialog id="place-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div><button class="modal-close" id="close-dialog" aria-label="Закрыть карточку"><span data-icon="close"></span></button></dialog>
+<dialog id="info-dialog" aria-labelledby="info-title"><div id="info-content"></div><button class="modal-close" id="close-info" aria-label="Закрыть"><span data-icon="close"></span></button></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./data.js"></script><script src="./app.js"></script>
+</body></html>
